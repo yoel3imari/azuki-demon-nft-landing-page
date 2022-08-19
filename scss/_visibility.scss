@@ -1,0 +1,31 @@
+.hide-for-mobile {
+    @include break-down(phone) {
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+}
+
+.hide-for-tablette-up {
+    @include break-up(tablette) {
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+}
+
+.hide-for-tablette-down {
+    @include break-down(tablette) {
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+}
+
+.hide-for-desktop {
+    @include break-up(desktop) {
+        visibility: hidden;
+        opacity: 0;
+        display: none;
+    }
+}

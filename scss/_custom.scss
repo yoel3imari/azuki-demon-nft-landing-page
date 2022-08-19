@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    &::after,
+    &::before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: $text-ff;
+    font-weight: 300;
+    font-size: 16px;
+    letter-spacing: 1px;
+
+    @include break-down(phone) {
+        letter-spacing: normal;
+    }
+}
+
+h1,
+h2,
+h3 {
+    letter-spacing: 1px;
+    font-family: $h-ff;
+}
+
+h1 {
+    line-height: 3.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}

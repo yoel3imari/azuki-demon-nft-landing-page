@@ -1,0 +1,246 @@
+.container {
+    padding-inline: 6vw;
+    width: 100%;
+}
+
+.section {
+    padding-block: 1rem;
+}
+
+a.cta {
+    color: $on-dark-bg;
+    font-size: 1rem;
+    font-weight: $text-fw;
+    text-align: center;
+    white-space: nowrap;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    position: relative;
+
+    outline: currentcolor none medium;
+    padding: .75rem 2rem;
+    background-color: $dark-bg;
+    cursor: pointer;
+
+    border: medium none;
+    border-radius: 50px;
+    transition: all 200ms ease 0s;
+
+    &:hover {
+        transform: scale(.9);
+    }
+
+    &::after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        border: 2px solid $dark-bg;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        transition: all 0.2s ease 0s;
+    }
+
+    &:hover::after {
+        transform: translate(-50%, -50%) scale(1);
+        width: calc(100% + .9rem);
+        height: calc(100% + .9rem);
+    }
+}
+
+.scale-on-hover {
+    transition: all .2s ease 0s;
+
+    &:hover {
+        transform: scale(.9);
+    }
+}
+
+.menu {
+
+    ul {
+        font-size: 1rem;
+    }
+
+    li {
+        text-transform: capitalize;
+    }
+
+    a {
+        display: block;
+        width: fit-content;
+        transition: width .2s ease;
+
+        &:hover {
+            font-weight: 700;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+
+        &::after {
+            content: "";
+            position: relative;
+            display: block;
+            background-color: $on-light-bg;
+            width: 0%;
+            height: 2px;
+            transition: width .2s ease-in;
+        }
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    color: $on-light-bg;
+    font-weight: 900;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 1rem;
+    background: $on-dark-bg;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px -1px $on-dark-bg;
+}
+
+.swiper-slide img {
+    display: block;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.swiper-pagination {
+    position: relative;
+    bottom: 0 !important;
+    padding-block: 1rem;
+    color: $on-light-bg;
+    font-weight: 900;
+}
+
+.mobile-navbar-toggler {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+
+    background-color: $dark-bg;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    cursor: pointer;
+    box-shadow: $shadow;
+    opacity: .75;
+    z-index: 999;
+
+    &::before {
+        content: "";
+        position: relative;
+        top: -3px;
+        left: 0;
+        display: block;
+        width: 50%;
+        height: 3px;
+        background-color: $on-dark-bg;
+        border-radius: 50px;
+    }
+
+    &::after {
+        content: "";
+        position: relative;
+        top: 3px;
+        left: 0;
+        display: block;
+        width: 50%;
+        height: 3px;
+        background-color: $on-dark-bg;
+        border-radius: 50px;
+    }
+}
+
+.mobile-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: $light-bg;
+    color: $on-light-bg;
+    transition: all .2s ease 0s;
+
+    ul {
+        text-align: center;
+        width: 100%;
+        padding: 2rem;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        font-size: 2rem;
+        font-weight: 100;
+        text-transform: capitalize;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    li {
+        width: 100%;
+    }
+
+    a {
+        display: block;
+        font-weight: 900;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.elm-closed {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.elm-open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.toggler-open {
+    &::before {
+        top: -3px;
+        left: 0;
+    }
+
+    &::after {
+        top: 3px;
+        left: 0;
+    }
+}
+
+.toggler-close {
+    &::before {
+        transform: rotate(45deg) translateY(6px) ;
+        left: 4px;
+    }
+
+    &::after {
+        transform: rotate(-45deg) translateY(-6px) ;
+        left: 4px;
+    }
+}

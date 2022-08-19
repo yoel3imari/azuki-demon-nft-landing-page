@@ -1,0 +1,137 @@
+@include break-down(phone) {
+
+    h1 {
+        font-size: 2.5rem !important;
+    }
+
+    .container {
+        padding-inline: 1rem;
+    }
+
+    header {
+        position: absolute;
+        .container {
+            justify-content: center;
+        }
+    }
+
+    div._hero {
+        height: auto;
+        text-align: center;
+
+        .container {
+            grid-template-rows: 1fr;
+            grid-template-columns: repeat(1, auto);
+            padding-top: 2.5rem;
+        }
+
+        .subhead {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-block: 2.5rem;
+
+            .community-wrapper {
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        h3 {
+            font-size: 1.2rem;
+        }
+
+        ._hero-pic {
+            padding-inline: .5rem;
+            padding-block: 2.5rem;
+            grid-row: auto;
+            grid-column: auto;
+
+            .pic {
+                width: 75vw;
+                height: 75vw;
+            }
+
+            .pic::after {
+                width: 75vw;
+                height: 75vw;
+                transform: scale(1.2) translateX(calc(10% - 75vw/2)) translateY(5%);
+            }
+        }
+    }
+
+    main {
+        #sponsors {
+            justify-content: center;
+        }
+
+        #artworks .aw-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #roadmap {
+            .rm-list {
+                width: 100%;
+            }
+
+            .rm-item {
+                display: block;
+                max-width: 100%;
+            }
+
+            .rm-details {
+                margin-left: .5rem;
+            }
+        }
+
+        #leaders {
+            .ldr-wrapper {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        #faq {
+            height: auto;
+
+            .faq-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: start;
+                flex-wrap: wrap;
+            }
+        }
+    }
+
+    footer {
+        height: auto;
+
+        .invite {
+            text-align: center;
+            padding: 3rem;
+
+            h1 {
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+            }
+        }
+
+        .footer {
+
+            .ft {
+                padding: 1rem 0;
+            }
+
+            .rights,
+            .credits {
+                flex: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}

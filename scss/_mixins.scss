@@ -1,0 +1,16 @@
+// 481px, 761px
+$break-up: ("tablette": 600px, "desktop": 1024px);
+// 480px, 760px
+$break-down: ("phone": 599px, "tablette": 1023px);
+
+@mixin break-up ($size) {
+    @media only all and (min-width: map-get($break-up, $size)) {
+        @content;
+    }
+}
+
+@mixin break-down ($size) {
+    @media only all and (max-width: map-get($break-down, $size)) {
+        @content;
+    }
+}
